@@ -1,0 +1,6 @@
+@import 'bootstrap';
+@import './style.css';
+@import '@fortawesome/fontawesome-free/css/all.css';
+
+/* sul terminale : 
+npm i @fortawesome/fontawesome-free */
