@@ -21,14 +21,22 @@ class ProductController extends Controller
 
 
     //?METODO SAVE
-    $product = new Product();
-    $product->name = $name;
-    $product->brand = $brand;
-    $product->description = $description;
-    $product->price = $price;
-    $product->save();
-
+    // $product = new Product();
+    // $product->name = $name;
+    // $product->brand = $brand;
+    // $product->description = $description;
+    // $product->price = $price;
     // $product->save();
+
+    Product::create(
+        [
+            'name' => $name,
+            'description' => $description,
+            'brand' => $brand,
+            'price' => $price
+        ]
+    );
+
     return redirect()->route('homepage');
 
     // dd('controlla table');
@@ -36,7 +44,8 @@ class ProductController extends Controller
    }
 
    public function getProductsByBrand($brand){
+    
     $products = Product::where('brand' , $brand)->get();
-    return view('product/brand', ['products' => $products]);
+    return view('product/brand', compact('products'));
    }
 }
