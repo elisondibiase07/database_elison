@@ -10,7 +10,13 @@
             <a class="nav-link active" aria-current="page" href=" {{route('homepage')}} ">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{route('product.create')}}">Crea il tuo prodotto</a>
+            <a class="nav-link" href="{{route('product.create')}}">Crea il tuo Prodotto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('article.create')}}">Crea il tuo Articolo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('article.home')}}">Articoli</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -20,7 +26,7 @@
               <li><a class="dropdown-item" href="{{route('product.brand' , 'Apple')}}">Apple</a></li>
               <li><a class="dropdown-item" href="{{route('product.brand' , 'Sony')}}">Sony</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              
             </ul>
           </li>
         </ul>

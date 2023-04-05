@@ -1,6 +1,6 @@
 <x-layout>
 
-<x-header title="ciao" />
+<x-header title="Benvenuto nel Blog" />
 
 <div class="container">
     <div class="row">
