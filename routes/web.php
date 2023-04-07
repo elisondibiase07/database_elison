@@ -25,3 +25,7 @@ Route::get('/product/brand/{brand}',[ProductController::class , 'getProductsByBr
 Route::get('/article/create',[ArticleController::class , 'articleCreate'])->name('article.create');
 Route::post('/article/store',[ArticleController::class , 'articleStore'])->name('article.store');
 Route::get('/article',[ArticleController::class , 'article'])->name('article.home');
+Route::get('/article/detail/{id}',[ArticleController::class , 'detail'])->name('article.detail');
+Route::get('/article/update/{article}',[ArticleController::class , 'update'])->name('article.update');
+Route::put('/article/edit/{article}',[ArticleController::class , 'edit'])->name('article.edit');
+// Route::get('/article/delete',[ArticleController::class , 'delete'])->name('article.delete');
