@@ -1,4 +1,21 @@
+
+body{
+    background-color:rgb(220, 183, 203);
+}
+
 .navbar{
     color: rgb(12, 12, 12);
-    background-color: rgb(227, 143, 143);
+    background-color: rgba(227, 143, 143, 0.788);
+}
+
+
+.header{
+    background-image: url(https://www.jimdo.com/static/7f58e83e14a16db25da8e56995f710b8/b086f/hero.jpg);
+    background-size: cover;
+    
+}
+
+.h1-header{
+    background-color:  rgba(227, 143, 143, 0.788);
+    border-radius: 40px;
 }
