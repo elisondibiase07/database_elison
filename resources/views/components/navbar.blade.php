@@ -44,9 +44,9 @@
             Benvenuto {{Auth::user()->name}}
           </a>
           <ul class="dropdown-menu">
-            {{-- <li class="nav-item">
+            <li class="nav-item">
               <a class="nav-link" href="{{route('article.user')}}">Profilo Utente</a>
-            </li> --}}
+            </li>
             <li class="drop-item">
               <a class="nav-link" href="{{route('logout')}}" onclick="event.preventDefault(); 
               document.getElementById('logout-form').submit();">Logout</a>

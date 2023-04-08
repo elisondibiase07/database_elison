@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use Illuminate\Http\Request;
+use App\Http\Requests\UpdateRequest;
 use App\Http\Requests\ArticleRequest;
+use Illuminate\Support\Facades\Auth;
 
 class ArticleController extends Controller
 {   
@@ -52,7 +54,7 @@ class ArticleController extends Controller
             
         }
         
-        public function edit(Request $request , Article $article){
+        public function edit(UpdateRequest $request , Article $article){
             $article->title=$request->title;
             $article->description=$request->description;
             $article->author=$request->author;
@@ -65,5 +67,17 @@ class ArticleController extends Controller
             $article->save();
             return redirect(route('article.home', compact('article')));
         }
+
+        public function delete(Article $article){
+            $article->delete();
+            return redirect(route('article.home'));
+        }
+
+        public function articleUser(){
+            $articles= Article::where('author', Auth::user()->name)->get();
+            return view('article/user', compact('articles'));
+        }
+            
+
     }
         
